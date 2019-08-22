@@ -1,10 +1,10 @@
 #!/bin/bash
-#sudo apt-get install python-pip
-#sudo apt-get install python-tk -y
-#sudo apt-get install python-imaging python-pil.imagetk -y
-#pip install paramiko
-#pip install tkinter
-#pip install python-xlib
+sudo apt-get install python-pip
+sudo apt-get install python-tk -y
+sudo apt-get install python-imaging python-pil.imagetk -y
+pip install paramiko
+pip install tkinter
+pip install python-xlib
 
 sudo echo -e "#!/bin/bash\npython /opt/omadsconnect/omadsconnect.py " >> /usr/bin/omadsconnect
 sudo chmod +x /usr/bin/omadsconnect
