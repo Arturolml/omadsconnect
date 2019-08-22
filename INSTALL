@@ -9,7 +9,7 @@ pip install python-xlib
 sudo echo -e "#!/bin/bash\npython /opt/omadsconnect/omadsconnect.py " >> /usr/bin/omadsconnect
 sudo chmod +x /usr/bin/omadsconnect
 
-sudo echo -e  "[Desktop Entry]\nName=OmadsConnect\nType=Application\nExec=omadsconnect\nTerminal=false\nIcon=logo.ico\nComment=Virtualization\nNoDisplay=false\nCategories=X-Internet" >> /usr/share/applications/omadsconnect.desktop
+sudo echo -e  "[Desktop Entry]\nName=OmadsConnect\nType=Application\nExec=omadsconnect\nTerminal=false\nIcon=/opt/omadsconnect/images/logo.gif\nComment=Virtualization\nNoDisplay=false\nCategories=X-Internet" >> /usr/share/applications/omadsconnect.desktop
 
 sudo desktop-file-install /usr/share/applications/omadsconnect.desktop
 
