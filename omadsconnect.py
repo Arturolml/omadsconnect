@@ -20,7 +20,7 @@ window = Tk()
 
 window.title("Omadsconnect")
 window.configure(background='#F0F8FF')
-icon=PhotoImage("photo",file='./images/logo.gif')
+icon=PhotoImage("photo",file='/opt/omadsconnect/images/logo.gif')
 window.tk.call('wm', 'iconphoto', window._w, icon)
 window.geometry('550x400+400+200')
 window.resizable(width=False, height=False)
@@ -77,10 +77,10 @@ lblhyp.bind("<Button-1>", lambda e: callback("https://omads.co/shop"))
 #opcion
 progList=[
     "Programs",
-    "labview64",
+    "labview",
     "matlab",
     "calcula",
-    "octave --force-gui"
+    "octave"
 ]
 selProg = StringVar()
 selProg.set(progList[0])
@@ -91,7 +91,17 @@ lblprog=Label(window,text="Select Program ", background='#F0F8FF', font='bold')
 lblprog.grid(column=1,row=8 , sticky='e')
 
 # def
+
 def conne():
+        # if options
+    if selProg.get() == 'labview':
+        prog = 'labview64'
+    elif selProg.get() == 'octave':
+        prog = 'octave --force-gui'
+    elif selProg.get() == 'Matlab':
+        prog = 'matlab'
+    elif selProg.get() == 'calcula':
+        prog = 'calcula'
     if selProg.get()=='Programs':
         tkMessageBox.showerror("Error","Select a Program")
     else:
@@ -175,7 +185,7 @@ btn = Button(window, text="Connect", style="TButton",command=conne)
 btn.grid(column=3, row=9)
 
 # image
-image = Image.open("./images/omadsl1.png")
+image = Image.open("/opt/omadsconnect/images/omadsl1.png")
 photo = ImageTk.PhotoImage(image)
 lblimag = Label(image=photo, background='#F0F8FF')
 lblimag.image = photo
