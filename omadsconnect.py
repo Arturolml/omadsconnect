@@ -146,7 +146,7 @@ def conne():
         transport = ssh_client.get_transport()
         session = transport.open_session()
         session.request_x11(handler=x11_handler)
-        session.exec_command(selProg.get())
+        session.exec_command(prog)
         session_fileno = session.fileno()
         poller.register(session_fileno, select.POLLIN)
         # accept first remote x11 connection
