@@ -79,7 +79,7 @@ progList=[
     "Programs",
     "labview",
     "matlab",
-    "calcula",
+    "eButterfly",
     "octave"
 ]
 selProg = StringVar()
@@ -100,8 +100,8 @@ def conne():
         prog = 'octave --force-gui'
     elif selProg.get() == 'Matlab':
         prog = 'matlab'
-    elif selProg.get() == 'calcula':
-        prog = 'calcula'
+    elif selProg.get() == 'eButterfly':
+        prog = 'eButterfly'
     if selProg.get()=='Programs':
         tkMessageBox.showerror("Error","Select a Program")
     else:
